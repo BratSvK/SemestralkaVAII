@@ -98,7 +98,7 @@ button:active {
 
 ul.navbar-nav {
   width: 50%;
-  background-color: red;
+  background-color: #4dd2ff;
   z-index: 10000000 !important;
   position: relative;
 }
@@ -166,6 +166,14 @@ ul.navbar-nav {
 }
 @media (max-width: 767px) {
  
+  .logo {
+    margin: 0;
+  }
+  ul.navbar-nav {
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+  }
   
   .site-footer {
     display: none;
