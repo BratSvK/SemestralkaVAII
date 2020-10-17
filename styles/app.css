@@ -6,15 +6,18 @@ html {
   font-family: sans-serif;
 }
 
-
 body {
   margin: 0;
   background-color: #e6faff !important;
 }
-#logo {
+.navbar {
+  height: 100%;
+}
+.logo {
   background: url("../assets/images/logo.png") no-repeat left;
   width: 8rem;
   height: 100%;
+  border-radius: 10%;
 }
 /* 1 rem = 16px rem-> zavisle na root elemente */
 #main-header {
@@ -23,6 +26,7 @@ body {
   display: flex;
   align-items: center;
   background: #4dd2ff;
+  position: relative;
 }
 
 #main-header h1 {
@@ -91,11 +95,9 @@ button:active {
   color: white;
 }
 
-
 .content {
   background-color: #e6faff;
 }
-
 
 .card {
   border-radius: 10px !important;
@@ -112,7 +114,7 @@ button:active {
 #active-projects > header {
   background: #870099;
   padding: 1rem;
-  
+
   justify-content: space-between;
   align-items: center;
 }
@@ -122,16 +124,15 @@ button:active {
   margin: 0;
 }
 
-#active-projects ul{
+#active-projects ul {
   background-color: #ffccff;
   margin: 0;
 }
 
 #finished-projects ul {
   background-color: #d9d9d9;
-  margin: 0;;
+  margin: 0;
 }
-
 
 #finished-projects {
   border: 1px solid #535353;
@@ -140,7 +141,7 @@ button:active {
 #finished-projects > header {
   background: #535353;
   padding: 1rem;
-  
+
   justify-content: space-between;
   align-items: center;
 }
@@ -150,22 +151,26 @@ button:active {
   margin: 0;
 }
 
-
-.site-footer
-{
-  background-color:#26272b;
-  line-height:24px;
-  color:#737373;
+.site-footer {
+  background-color: #26272b;
+  line-height: 24px;
+  color: #737373;
 }
 
-.copyright-text
-{
-  margin:0
+.copyright-text {
+  margin: 0;
 }
-@media (max-width:767px)
-{
-  .site-footer
-  {
-    display:none;
+@media (max-width: 767px) {
+  .navbar {
+    width: 100%;
+  }
+  .logo {
+    position: relative;
+    justify-content: center;
+    /* top: 0; */
+    right: 0;
+  }
+  .site-footer {
+    display: none;
   }
 }
