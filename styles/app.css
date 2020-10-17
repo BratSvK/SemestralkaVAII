@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+
+body {
+  margin: 0;
+  background-color: #e6faff !important;
+}
+#logo {
+  background: url("../assets/images/logo.png") no-repeat left;
+  width: 8rem;
+  height: 100%;
+}
+/* 1 rem = 16px rem-> zavisle na root elemente */
+#main-header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  background: #4dd2ff;
+}
+
+#main-header h1 {
+  color: white;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 1rem 0;
+}
+
+section {
+  margin: 1rem auto;
+  width: 40rem;
+  max-width: 90%;
+  background-color: white;
+}
+
+section ul {
+  padding: 1rem;
+  max-height: 20rem;
+  overflow: scroll;
+}
+
+section > h2 {
+  color: white;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  background: #ff0062;
+  color: white;
+  border: 1px solid #ff0062;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+button.alt {
+  background: white;
+  color: #ff0062;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+button:active {
+  background: #ff2579;
+  border-color: #ff2579;
+  color: white;
+}
+
+
+.content {
+  background-color: #e6faff;
+}
+
+
+.card {
+  border-radius: 10px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  background: white;
+  display: list-item !important;
+}
+
+#active-projects {
+  border: 1px solid #870099;
+}
+/* vyber take aktivne projekty kde parent je header */
+#active-projects > header {
+  background: #870099;
+  padding: 1rem;
+  
+  justify-content: space-between;
+  align-items: center;
+}
+
+#active-projects header h2 {
+  color: white;
+  margin: 0;
+}
+
+#active-projects ul{
+  background-color: #ffccff;
+  margin: 0;
+}
+
+#finished-projects ul {
+  background-color: #d9d9d9;
+  margin: 0;;
+}
+
+
+#finished-projects {
+  border: 1px solid #535353;
+}
+
+#finished-projects > header {
+  background: #535353;
+  padding: 1rem;
+  
+  justify-content: space-between;
+  align-items: center;
+}
+
+#finished-projects header h2 {
+  color: white;
+  margin: 0;
+}
+
+
+.site-footer
+{
+  background-color:#26272b;
+  line-height:24px;
+  color:#737373;
+}
+
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    display:none;
+  }
+}
