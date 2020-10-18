@@ -1,8 +1,6 @@
 const addBtn = document.getElementById("addActivity");
 
 
-
-
 addBtn.addEventListener("click", () => {
     $('#exampleModal').modal('show');
 })
@@ -10,10 +8,3 @@ addBtn.addEventListener("click", () => {
 $(function (){
     $('#addActivity').tooltip()
 })
-
-
-
-
-
-
-

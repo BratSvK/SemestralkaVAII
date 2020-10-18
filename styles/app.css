@@ -95,7 +95,6 @@ button:active {
 } */
 
 ul.navbar-nav {
-  
   background-color: #4dd2ff;
   z-index: 10000000 !important;
   position: relative;
@@ -188,8 +187,12 @@ a > svg {
 .titleTag {
   font-weight: 900;
 }
-
-#addActivity {
+#googleMap {
+  width: 100%;
+  height: 400px;
+  margin: 3rem auto;
+}
+#addActivity  {
   font: inherit;
   padding: 0.5rem 1rem;
   background: #f67722;
@@ -199,6 +202,17 @@ a > svg {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
   cursor: pointer;
   margin: 15rem auto;
+}
+#trackme{
+  font: inherit;
+  padding: 0.5rem 1rem;
+  background: #f67722;
+  border: 1px solid #f67722;
+  color: white;
+  border-radius: 40px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  margin: 8rem auto;
 }
 
 @media (max-width: 767px) {
