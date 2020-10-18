@@ -182,6 +182,9 @@ a > svg {
 .copyright-text {
   margin: 0;
 }
+.navbar-collapse {
+  z-index: 1;
+}
 
 #addActivity {
   font: inherit;
@@ -189,7 +192,7 @@ a > svg {
   background: #f67722;
   border: 1px solid #f67722;
   color: white;
-  border-radius: 6px;
+  border-radius: 40px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
   cursor: pointer;
   margin: 15rem auto;
