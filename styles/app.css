@@ -8,6 +8,8 @@ html {
 
 body {
   margin: 0;
+  width: 100vw;
+    height: 100vw;
   background-color: #e6faff !important;
 }
 .navbar {
@@ -160,18 +162,12 @@ ul.navbar-nav {
   background-color: #26272b;
   line-height: 24px;
   color: #737373;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
+  z-index: -1;
 }
-.site-eshop-footer {
-  background-color: #26272b;
-  line-height: 24px;
-  color: #737373;
-  position: absolute;
- 
-  right: 0;
-}
+
 
 ul.navbar-nav li {
   margin-left: 1rem;
