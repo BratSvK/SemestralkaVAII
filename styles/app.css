@@ -29,13 +29,7 @@ body {
   position: relative;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
+
 
 ul {
   list-style: none;
@@ -166,6 +160,17 @@ ul.navbar-nav {
   background-color: #26272b;
   line-height: 24px;
   color: #737373;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.site-eshop-footer {
+  background-color: #26272b;
+  line-height: 24px;
+  color: #737373;
+  position: absolute;
+ 
+  right: 0;
 }
 
 ul.navbar-nav li {
@@ -215,6 +220,53 @@ a > svg {
   margin: 8rem auto;
 }
 
+
+
+.cart {
+  
+  border: 2px solid #540075;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #540075;
+}
+
+.product-list {
+  list-style: none;
+  margin: 0 2rem;
+  padding: 0;
+}
+
+.product-item {
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  width: 50rem;
+  max-width: 90%;
+}
+
+.product-item img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.product-item__content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-item h2,
+.product-item h3 {
+  margin: 0 0 1rem 0;
+}
+
+
 @media (max-width: 767px) {
   .logo {
     margin: 0;
@@ -231,6 +283,9 @@ a > svg {
   }
 
   .site-footer {
+    display: none;
+  }
+  .site-eshop-footer{
     display: none;
   }
 }
