@@ -47,7 +47,7 @@ class Product {
     // value is array of items
     set cartItems(value) {
       this.items = value;
-      this.totalOutput.innerHTML = ` <h2>Total: \$${this.totalAmount.toFixed(2)}</h2>`;
+      this.totalOutput.innerHTML = ` <h2>Total: \€${this.totalAmount.toFixed(2)}</h2>`;
     }
   
     get totalAmount() {
@@ -75,7 +75,7 @@ class Product {
     render() {
       const cartEl = this.createRootElement("section", "cart");
       cartEl.innerHTML = `
-      <h2>Total: \$${0}</h2>
+      <h2>Total: \€${0}</h2>
       <button>Order Now!</button>
       `;
   
