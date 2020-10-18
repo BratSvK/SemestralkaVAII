@@ -185,6 +185,9 @@ a > svg {
 .navbar-collapse {
   z-index: 1;
 }
+.titleTag {
+  font-weight: 900;
+}
 
 #addActivity {
   font: inherit;
