@@ -182,6 +182,19 @@ a > svg {
 .copyright-text {
   margin: 0;
 }
+
+#addActivity {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  background: #f67722;
+  border: 1px solid #f67722;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  margin: 15rem auto;
+}
+
 @media (max-width: 767px) {
   .logo {
     margin: 0;
@@ -192,6 +205,7 @@ a > svg {
     padding: 1rem;
     width: 50%;
   }
+
   ul.info {
     display: contents;
   }
