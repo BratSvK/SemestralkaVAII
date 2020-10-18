@@ -18,7 +18,7 @@ body {
   width: 6rem;
   height: 100%;
   border-radius: 10%;
-  margin-right: 2rem ;
+  margin-right: 2rem;
 }
 /* 1 rem = 16px rem-> zavisle na root elemente */
 #main-header {
@@ -28,8 +28,6 @@ body {
   background: #4dd2ff;
   position: relative;
 }
-
-
 
 footer {
   position: absolute;
@@ -102,6 +100,13 @@ ul.navbar-nav {
   z-index: 10000000 !important;
   position: relative;
 }
+.info li {
+  border-radius: 50rem!important;
+}
+
+.info {
+  margin: 1rem auto;
+}
 
 .card {
   border-radius: 10px !important;
@@ -165,7 +170,6 @@ ul.navbar-nav {
   margin: 0;
 }
 @media (max-width: 767px) {
- 
   .logo {
     margin: 0;
   }
@@ -174,7 +178,8 @@ ul.navbar-nav {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     padding: 1rem;
   }
-  
+
+
   .site-footer {
     display: none;
   }
