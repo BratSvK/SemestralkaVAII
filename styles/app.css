@@ -101,11 +101,14 @@ ul.navbar-nav {
   position: relative;
 }
 .info li {
-  border-radius: 50rem!important;
+  border-radius: 50rem !important;
 }
 
 .info {
   margin: 1rem auto;
+}
+.badge {
+  font-size: 100% !important;
 }
 
 .card {
@@ -166,6 +169,16 @@ ul.navbar-nav {
   color: #737373;
 }
 
+ul.navbar-nav li {
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+
+a > svg {
+  vertical-align: baseline;
+  font-size: 2rem;
+}
+
 .copyright-text {
   margin: 0;
 }
@@ -178,7 +191,9 @@ ul.navbar-nav {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     padding: 1rem;
   }
-
+  ul.info {
+    display: contents;
+  }
 
   .site-footer {
     display: none;
