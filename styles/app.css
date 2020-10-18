@@ -95,7 +95,7 @@ button:active {
 } */
 
 ul.navbar-nav {
-  width: 50%;
+  
   background-color: #4dd2ff;
   z-index: 10000000 !important;
   position: relative;
@@ -190,6 +190,7 @@ a > svg {
     border-radius: 10px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     padding: 1rem;
+    width: 50%;
   }
   ul.info {
     display: contents;
