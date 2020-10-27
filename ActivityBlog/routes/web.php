@@ -19,5 +19,16 @@ Route::get('/', function () {
 });
 
 
+Route::get('/creation', function () {
+    return view('pages/creation');
+});
+
+Route::get('/events', function () {
+    return view('pages/events');
+});
+
+Route::get('/eshop', function () {
+    return view('pages/eshop');
+});
 
 
