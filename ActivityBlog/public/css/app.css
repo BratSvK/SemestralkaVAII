@@ -16,7 +16,7 @@
     height: 100%;
   }
   .logo {
-    background: url("{{ asset('assets/images/logo.png') }}") no-repeat left;
+    background: url("../assets/images/logo.png") no-repeat left;
     width: 6rem;
     height: 100%;
     border-radius: 10%;
