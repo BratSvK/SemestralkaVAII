@@ -129,8 +129,8 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('isImporant', 'Main Goal:') !!}
-                    {!! Form::checkbox('isImporant', 'false')!!}
+                    {!! Form::label('is_main', 'Main Goal:') !!}
+                    {!! Form::checkbox('is_main', '1')!!}
                 </div>
 
 

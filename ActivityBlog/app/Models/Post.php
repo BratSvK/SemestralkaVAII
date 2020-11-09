@@ -15,7 +15,8 @@ class Post extends Model
         'title',
         'content',
         'info',
-        'isActive'
+        'isActive',
+        'isMain'
     ];
 
 
