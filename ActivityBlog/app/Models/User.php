@@ -40,4 +40,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    //metoda pre databazu 1:*
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Post');
+    }
 }
