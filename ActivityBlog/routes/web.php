@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::resource('/posts', PostController::class);  //for creation routes
+
 
 Route::get('/creation', function () {
     return view('pages/creation');

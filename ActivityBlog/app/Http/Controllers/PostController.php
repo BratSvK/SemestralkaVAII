@@ -13,7 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -35,6 +35,8 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+
+        return $request->all();
     }
 
     /**
