@@ -132,6 +132,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../testProject" />
@@ -155,7 +156,7 @@
       <updated>1603878920769</updated>
       <workItem from="1603878922431" duration="21000" />
       <workItem from="1604497371866" duration="196000" />
-      <workItem from="1604909184294" duration="5214000" />
+      <workItem from="1604909184294" duration="5354000" />
     </task>
     <servers />
   </component>
