@@ -104,7 +104,7 @@
 
             <!-- Modalne okno na pridanie zaznamu-->
             <div class="modal-body">
-                <h1>Create Post</h1>
+
 
                 {{--    <form method="post" action="/posts">--}}
 
@@ -116,81 +116,50 @@
                     {!! Form::label('title', 'Title:') !!}
                     {!! Form::text('title', null , ['class'=>'form-control']) !!}
                 </div>
+
                 <div class="form-group">
-                    {!! Form::file('file', ['class'=>'form-control']) !!}
+
+                    {!! Form::label('content', 'Content:') !!}
+                    {!! Form::text('content', null , ['class'=>'form-control']) !!}
+                </div>
+                <div class="form-group">
+
+                    {!! Form::label('info', 'Extra Info:') !!}
+                    {!! Form::text('info', null , ['class'=>'form-control']) !!}
                 </div>
 
+                <div class="form-group">
+                    {!! Form::label('isImporant', 'Main Goal:') !!}
+                    {!! Form::checkbox('isImporant', 'false')!!}
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
                 <div class="form-group">
                     {!! Form::submit('Create Post', ['class' => "btn btn-primary"]) !!}
 
                 </div>
-
-
-                {!! Form::close() !!}
-
-
-
-                @if(count($errors) > 0)
-
-                    <div class="alert alert-danger">
-
-                        <ul>
-                            @foreach($errors->all() as $error)
-                                <li>{{$error}}</li>
-
-                            @endforeach
-
-                        </ul>
-
-                    </div>
-
-                @endif
-
-                {{--          <form>--}}
-                {{--            <div class="form-row">--}}
-                {{--              <div class="col-md-2">--}}
-                {{--                <label  class="titleTag">Title:</label>--}}
-                {{--              </div>--}}
-                {{--              <div class="col-md-6">--}}
-                {{--                <input type="text" class="form-control" placeholder="Title of the activity">--}}
-                {{--              </div>--}}
-
-
-                {{--                <div class="col-md-2">--}}
-                {{--                  <label  class="titleTag">Categ.: </label>--}}
-                {{--                </div>--}}
-                {{--                <div class="col-md-2">--}}
-
-
-                {{--                <select class="custom-select" id="validationTooltip04" required>--}}
-                {{--                  <option selected disabled value="">Choose...</option>--}}
-                {{--                  <option value="1">Sport</option>--}}
-                {{--                  <option value="2">Homework</option>--}}
-                {{--                  <option value="3">Food suplies</option>--}}
-                {{--                </select>--}}
-                {{--                <div class="invalid-tooltip">--}}
-                {{--                  Please select a valid state.--}}
-                {{--                </div>--}}
-                {{--              </div>--}}
-
-                {{--            </div>--}}
-
-                {{--            <div class="form-row">--}}
-                {{--              <div class="col-md-2">--}}
-                {{--                <label  class="titleTag">Body:</label>--}}
-                {{--              </div>--}}
-                {{--              <div class="col-md-10">--}}
-                {{--                <input type="text" class="form-control" placeholder="Notes...">--}}
-                {{--              </div>--}}
-
-                {{--            </div>--}}
-
-                {{--          </form>--}}
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            {!! Form::close() !!}
+
+
+
+            @if(count($errors) > 0)
+
+                <div class="alert alert-danger">
+
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+
+                        @endforeach
+
+                    </ul>
+
+                </div>
+
+            @endif
         </div>
     </div>
 </div>
