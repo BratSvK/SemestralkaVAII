@@ -13,7 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
-    
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous" defer></script>
@@ -93,6 +93,8 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
+          <!-- Modalne okno na pridanie zaznamu-->
         <div class="modal-body">
           <form>
             <div class="form-row">
@@ -103,13 +105,13 @@
                 <input type="text" class="form-control" placeholder="Title of the activity">
               </div>
 
-              
+
                 <div class="col-md-2">
                   <label  class="titleTag">Categ.: </label>
                 </div>
                 <div class="col-md-2">
-              
-               
+
+
                 <select class="custom-select" id="validationTooltip04" required>
                   <option selected disabled value="">Choose...</option>
                   <option value="1">Sport</option>
