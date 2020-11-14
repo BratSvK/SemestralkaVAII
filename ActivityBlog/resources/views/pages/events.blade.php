@@ -96,7 +96,7 @@
         <div class="row">
             <!--Miesto pre ikonku-->
             <div class="col-md-4">
-                <button type="button" data-toggle="tooltip" data-placement="top" title="Find my events" id="trackme"><i
+                <button  type="button" data-toggle="tooltip" data-placement="top" title="Find my events" id="trackme"><i
                         class="fas fa-street-view fa-10x"></i></button>
             </div>
             <!--Miesto pre mapu-->

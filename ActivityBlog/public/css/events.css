@@ -4,14 +4,23 @@
     max-width: 90%;
     margin: 2rem auto;
     border: 1px solid #ccc;
-  }
-  
-  #googleMap {
+}
+
+#googleMap {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  
+@media (max-width: 767px) {
+    .fa-10x {
+        font-size: 2em;
+    }
+
+    .col-md-4 {
+        height: 10rem;
+        transform: translate(40%);
+    }
+}
