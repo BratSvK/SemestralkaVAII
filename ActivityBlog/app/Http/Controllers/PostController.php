@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,6 +15,8 @@ class PostController extends Controller
     public function index()
     {
 
+
+
     }
 
     /**
@@ -24,6 +27,7 @@ class PostController extends Controller
     public function create()
     {
         //
+        return view('pages/events.blade');
     }
 
     /**
@@ -34,9 +38,21 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //ulozit do databazy 
+        //ulozit do databazy
 
-        return $request->all();
+        //$input = $request->all();
+        //Post::create($input);
+
+        $this->validate($request,[
+            'title'=> 'required',
+            'content' => 'required',
+            'info' => 'required'
+        ]);
+
+        //$items = Post::create($request->all());
+
+        return back()->with('success','Product successfully added.');
+
     }
 
     /**

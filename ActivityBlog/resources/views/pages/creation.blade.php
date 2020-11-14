@@ -110,7 +110,7 @@
 
                 {{--    <form method="post" action="/posts">--}}
 
-                {!! Form::open(['method'=>'POST','action'=>'App\Http\Controllers\PostController@store','files'=>'true']) !!}
+                {!! Form::open(['method'=>'POST','action'=>'App\Http\Controllers\PostController@store']) !!}
 
 
                 <div class="form-group">
@@ -144,6 +144,7 @@
                 </div>
             </div>
             {!! Form::close() !!}
+
 
 
 
