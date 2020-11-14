@@ -35,15 +35,17 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class=" logo">
-            <a class="navbar-brand" href="#"></a>
+        <div class="logo">
+
+            <a class="navbar-brand" href="/"></a>
+
         </div>
 
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="/">
                         <svg width="1em" height="1em" viewBox="0 0 16 16"
                              class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"

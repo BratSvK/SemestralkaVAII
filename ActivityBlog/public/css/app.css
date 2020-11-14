@@ -1,15 +1,15 @@
 * {
     box-sizing: border-box;
   }
-  
+
   html {
     font-family: sans-serif;
   }
-  
+
   body {
     margin: 0;
     width: 100vw;
-   
+
     background-color: #e6faff !important;
   }
   .navbar {
@@ -30,37 +30,37 @@
     background: #4dd2ff;
     position: relative;
   }
-  
-  
-  
+
+
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
+
   li {
     margin: 1rem 0;
   }
-  
+
   section {
     margin: 1rem auto;
     width: 40rem;
     max-width: 90%;
     background-color: white;
   }
-  
+
   section ul {
     padding: 1rem;
     max-height: 20rem;
     overflow: scroll;
   }
-  
+
   section > h2 {
     color: white;
     margin: 0;
   }
-  
+
   button {
     font: inherit;
     background: #ff0062;
@@ -69,27 +69,27 @@
     padding: 0.5rem 1.5rem;
     cursor: pointer;
   }
-  
+
   button.alt {
     background: white;
     color: #ff0062;
   }
-  
+
   button:focus {
     outline: none;
   }
-  
+
   button:hover,
   button:active {
     background: #ff2579;
     border-color: #ff2579;
     color: white;
   }
-  
+
   /* .content {
     background-color: #e6faff;
   } */
-  
+
   ul.navbar-nav {
     background-color: #4dd2ff;
     z-index: 10000000 !important;
@@ -98,14 +98,14 @@
   .info li {
     border-radius: 50rem !important;
   }
-  
+
   .info {
     margin: 1rem auto;
   }
   .badge {
     font-size: 100% !important;
   }
-  
+
   .card {
     border-radius: 10px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -113,7 +113,7 @@
     background: white;
     display: list-item !important;
   }
-  
+
   #active-projects {
     border: 1px solid #870099;
   }
@@ -121,43 +121,49 @@
   #active-projects > header {
     background: #870099;
     padding: 1rem;
-  
+
     justify-content: space-between;
     align-items: center;
   }
-  
+
   #active-projects header h2 {
     color: white;
     margin: 0;
   }
-  
+
   #active-projects ul {
     background-color: #ffccff;
     margin: 0;
   }
-  
+
   #finished-projects ul {
     background-color: #d9d9d9;
     margin: 0;
   }
-  
+
   #finished-projects {
     border: 1px solid #535353;
   }
-  
+
   #finished-projects > header {
     background: #535353;
     padding: 1rem;
-  
+
     justify-content: space-between;
     align-items: center;
   }
-  
+
   #finished-projects header h2 {
     color: white;
     margin: 0;
   }
-  
+  .logo a {
+      height: inherit;
+      width: inherit;
+      background: none;
+      border: 0;
+  }
+
   .site-footer {
     background-color: #26272b;
     line-height: 24px;
@@ -167,18 +173,18 @@
     right: 0;
     z-index: -1;
   }
-  
-  
+
+
   ul.navbar-nav li {
     margin-left: 1rem;
     margin-right: 2rem;
   }
-  
+
   a > svg {
     vertical-align: baseline;
     font-size: 2rem;
   }
-  
+
   .copyright-text {
     margin: 0;
   }
@@ -188,7 +194,7 @@
   .titleTag {
     font-weight: 900;
   }
-  
+
   #addActivity  {
     font: inherit;
     padding: 0.5rem 1rem;
@@ -211,53 +217,53 @@
     cursor: pointer;
     margin: 8rem auto;
   }
-  
-  
-  
+
+
+
   .cart {
-    
+
     border: 2px solid #540075;
     border-radius: 10px;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
   }
-  
+
   .cart h2 {
     margin: 0;
     font-size: 1.5rem;
     color: #540075;
   }
-  
+
   .product-list {
     list-style: none;
     margin: 0 2rem;
     padding: 0;
   }
-  
+
   .product-item {
     margin: 2rem auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     width: 50rem;
     max-width: 90%;
   }
-  
+
   .product-item img {
     width: 100%;
     height: 20rem;
     object-fit: cover;
   }
-  
+
   .product-item__content {
     padding: 1rem;
     text-align: center;
   }
-  
+
   .product-item h2,
   .product-item h3 {
     margin: 0 0 1rem 0;
   }
-  
+
 
   .backdrop {
     position: fixed;
@@ -268,7 +274,7 @@
     background: rgba(0, 0, 0, 0.75);
     z-index: 10;
   }
-  
+
   .modalW {
     position: fixed;
     top: 25vh;
@@ -279,18 +285,18 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   }
-  
+
   .modal__content {
     padding: 1rem;
     min-height: 10rem;
   }
-  
+
   .centered {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .lds-dual-ring {
     display: inline-block;
     width: 64px;
@@ -316,7 +322,7 @@
       transform: rotate(360deg);
     }
   }
-  
+
   @media (max-width: 767px) {
     .logo {
       margin: 0;
@@ -327,11 +333,11 @@
       padding: 1rem;
       width: 50%;
     }
-  
+
     ul.info {
       display: contents;
     }
-  
+
     .site-footer {
       display: none;
     }
@@ -343,4 +349,3 @@
       width: 30rem;
     }
   }
-  

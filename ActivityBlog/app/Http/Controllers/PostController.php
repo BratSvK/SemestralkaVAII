@@ -34,7 +34,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //ulozit do databazy 
 
         return $request->all();
     }
