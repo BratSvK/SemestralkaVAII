@@ -36,7 +36,7 @@
     <!--Nachystane pre loadSpinner-->
     <template id="modal-template">
         <div class="backdrop"></div>
-        <div class="modal"></div>
+        <div class="modalW"></div>
     </template>
     <template id="loading-modal-content">
         <div class="modal__content centered">

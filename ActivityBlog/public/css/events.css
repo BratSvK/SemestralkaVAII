@@ -19,6 +19,15 @@
         font-size: 2em;
     }
 
+    .modalW {
+      top: 30vh;
+      left: 11%;
+      width: 50%;
+      background: #e6faff;
+      z-index: 20;
+      border-radius: 24px;
+    }
+
     .col-md-4 {
         height: 10rem;
         transform: translate(40%);

@@ -269,12 +269,12 @@
     z-index: 10;
   }
   
-  .modal {
+  .modalW {
     position: fixed;
     top: 25vh;
     left: 10%;
     width: 80%;
-    background: white;
+    background: #e6faff;;
     z-index: 20;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);

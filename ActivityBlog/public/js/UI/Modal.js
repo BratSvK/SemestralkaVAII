@@ -15,7 +15,7 @@ export class Modal {
         // code here
         const modalElements = document.importNode(this.modalTemplateEl.content, true); // make deep clone get acces to element properies to inside tag
         // create a properties for class
-        this.modalElement = modalElements.querySelector(".modal"); // get ot specific element with class .
+        this.modalElement = modalElements.querySelector(".modalW"); // get ot specific element with class .
         this.backdropElement = modalElements.querySelector(".backdrop"); // get ot specific element with class .
   
         const contentElement = document.importNode(this.contentTemplateEl.content, true);
