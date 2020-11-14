@@ -49,7 +49,7 @@ class PostController extends Controller
             'info' => 'required'
         ]);
 
-        //$items = Post::create($request->all());
+        $items = Post::create($request->all());
 
         return back()->with('success','Product successfully added.');
 

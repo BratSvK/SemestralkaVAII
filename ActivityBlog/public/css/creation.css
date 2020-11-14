@@ -1,0 +1,12 @@
+.alert-success {
+    float: right;
+    border-radius: 20px !important;
+
+}
+
+@media (max-width: 767px) {
+    .alert {
+        float: none;
+    }
+}
+

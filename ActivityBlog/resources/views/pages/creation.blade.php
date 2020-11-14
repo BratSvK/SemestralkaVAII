@@ -8,6 +8,7 @@
     <title>Project Board</title>
     <link rel="stylesheet" href="<?php echo asset('css/app.css')?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('css/all.min.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo asset('css/creation.css')?>" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -83,6 +84,7 @@
     </nav>
 
 </header>
+@include('Utility/flash-message')
 
 
 <div class="container">
@@ -103,6 +105,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+
 
             <!-- Modalne okno na pridanie zaznamu-->
             <div class="modal-body">
