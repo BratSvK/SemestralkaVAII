@@ -13,8 +13,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_XutZaq6kFoCFVsGC1TCwWCHZmz1VLII" async defer>
+
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_XutZaq6kFoCFVsGC1TCwWCHZmz1VLII">
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -24,7 +24,7 @@
     </script>
 
 
-    <script type="text/javascript" src="{{ URL::asset('js/events.js') }}" defer></script>
+    <script type="module" src="{{ URL::asset('js/events.js') }}" defer></script>
     <!-- <script src="assets/scripts/app.js" defer></script> zatial len zalozenie hlavicky pre JavaScript defer sluzi na vykonanie po zobrazeni HTML stránky -->
 </head>
 
@@ -33,6 +33,18 @@
         <h2>More Info</h2>
         <p></p>
     </template>
+    <!--Nachystane pre loadSpinner-->
+    <template id="modal-template">
+        <div class="backdrop"></div>
+        <div class="modal"></div>
+    </template>
+    <template id="loading-modal-content">
+        <div class="modal__content centered">
+            <div class="lds-dual-ring"></div>
+        </div>
+    </template>
+
+
     <header id="main-header">
 
         <nav class="navbar navbar-expand-lg navbar-light  justify-content-between ">
@@ -96,7 +108,7 @@
         <div class="row">
             <!--Miesto pre ikonku-->
             <div class="col-md-4">
-                <button  type="button" data-toggle="tooltip" data-placement="top" title="Find my events" id="trackme"><i
+                <button type="button" data-toggle="tooltip" data-placement="top" title="Find my events" id="trackme"><i
                         class="fas fa-street-view fa-10x"></i></button>
             </div>
             <!--Miesto pre mapu-->
@@ -104,7 +116,7 @@
                 <section id="selected-place">
                     <div id="googleMap">
                         <p>
-                            You haven't selected any place yet. Please enter an address or locate
+                            You haven't selected any place yet. Please locate
                             yourself!
                         </p>
                     </div>
