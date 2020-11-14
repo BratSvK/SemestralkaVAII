@@ -1,8 +1,8 @@
 import { Modal } from "./UI/Modal.js";
 import { Map } from "./UI/Map.js";
 
-$(function () {
-  $("#trackme").tooltip();
+$(function() {
+    $("#trackme").tooltip();
 });
 
 class PlaceFinder {
@@ -14,15 +14,10 @@ class PlaceFinder {
             "click",
             this.locateUserHandler.bind(this)
         ); // put a function which we want, when this event occurs, call on this event
-      
-      }
-
-    
-
-      
+    }
 
     getModal(contentId, text) {
-      return new Modal(contentId, text);
+        return new Modal(contentId, text);
     }
 
     selectPlace(coordinates) {
@@ -51,9 +46,9 @@ class PlaceFinder {
         modal.show();
 
         navigator.geolocation.getCurrentPosition(
-             successResult => {
+            successResult => {
                 //hide a loading spinner
-              modal.hide();
+                modal.hide();
                 //create suradnice of user
                 const coordinates = {
                     lat: successResult.coords.latitude,
@@ -74,11 +69,9 @@ class PlaceFinder {
     }
 }
 //calland instance
-new PlaceFinder(); 
+new PlaceFinder();
 
 // const button = document.getElementById("trackme");
-
-
 
 // //how promises works internally
 // const setTimer = (duration) => {

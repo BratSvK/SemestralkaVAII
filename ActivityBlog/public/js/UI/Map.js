@@ -15,7 +15,7 @@ export class Map {
       //loaded correctly
       const map = new google.maps.Map(document.getElementById("googleMap"), {
         center: coordinates, // expect a object with lat and lng
-        zoom: 16,
+        zoom: 12,
       });
       // we want add marker nad where to place it
       new google.maps.Marker({
