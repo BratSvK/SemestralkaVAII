@@ -89,6 +89,7 @@
 
 </header>
 <!-- Hlavny obsah-->
+@include('Utility/flash-message')
 
 
 <div class="container">
@@ -99,6 +100,7 @@
                     class="badge badge-primary badge-pill">{{count($activePosts)}}</span></li>
             <li class="list-group-item d-flex justify-content-between align-items-center">Finished: <span
                     class="badge badge-primary badge-pill">{{count($othersPosts)}}</span></li>
+
 
             <li class="list-group-item d-flex justify-content-between align-items-center">Main Goal: <span
                     class="badge badge-primary badge-pill"><svg width="1em" height="1em" viewBox="0 0 16 16"
@@ -140,7 +142,10 @@
                             @endif
                             <p>{{$Apost->body}}</p>
                             <button class="alt" id="info" data-toggle="tooltip" data-placement="top" title="{{$Apost->info}}">More Info</button>
-                            <button>Finish</button>
+
+                                <a href="{{route('posts.edit', $Apost->id)}}">
+                                    <button>Finish</button>
+                                </a>
 
                         </li>
                     @endforeach
@@ -174,7 +179,9 @@
                             @endif
                             <p>{{$Opost->body}}</p>
                             <button class="alt" id="info" data-toggle="tooltip" data-placement="top" title="{{$Opost->info}}">More Info</button>
-                            <button>Finish</button>
+                                <a href="{{route('posts.edit', $Opost->id)}}">
+                                    <button>Finish</button>
+                                </a>
                         </li>
                     @endforeach
                 </ul>

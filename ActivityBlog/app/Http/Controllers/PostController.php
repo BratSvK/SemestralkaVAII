@@ -18,9 +18,11 @@ class PostController extends Controller
     {
 
         $user = User::findOrFail(1);
+        // only user posts
+        $post = $user->posts;
+        $activePosts = $post->where('isActive', 1)->sortBy('created_at');
+        $othersPosts = $post->where('isActive', 0)->sortBy('created_at');
 
-        $activePosts = Post::where('user_id', $user->id)->where('isActive', 1)->orderBy('created_at')->get();
-        $othersPosts = Post::where('user_id', $user->id)->where('isActive', 0)->orderBy('created_at')->get();
 
 
         // zobraz tuto stranku a predaj tam parametre posts
@@ -66,7 +68,7 @@ class PostController extends Controller
 
 
         // return back to page and set to session_variable succces for message
-        return back()->with('success', 'Product successfully added.');
+        return back()->with('success', 'Activity successfully added.');
 
     }
 
@@ -91,6 +93,13 @@ class PostController extends Controller
     public function edit($id)
     {
         //
+        $post = Post::findOrFail($id)->update(['isActive'=> 0]);
+        
+
+
+        return back()->with('success', 'Activity successfully finished.');
+
+
     }
 
     /**
@@ -103,6 +112,8 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+
     }
 
     /**
