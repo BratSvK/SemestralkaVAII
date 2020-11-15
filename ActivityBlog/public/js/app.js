@@ -1,16 +1,9 @@
-const addBtn = document.getElementById("addActivity");
 
+const infoBtn = document.getElementById('info');
 
-
-
-addBtn.addEventListener("click", () => {
-    $('#exampleModal').modal('show');
-})
-
-$(function (){
-    $('#addActivity').tooltip()
-})
-
+$(infoBtn).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 
 
 

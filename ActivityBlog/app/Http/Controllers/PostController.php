@@ -18,15 +18,9 @@ class PostController extends Controller
     {
 
         $user = User::findOrFail(1);
-        if(!$user){
-            $post = new Post();
 
-            return "Nenasiel sa User";
-        }
-
-        $activePosts = Post::where('user_id',$user->id)->where('isActive',1)->orderBy('created_at')->get();
-        $othersPosts = Post::where('user_id',$user->id)->where('isActive',0)->orderBy('created_at')->get();
-
+        $activePosts = Post::where('user_id', $user->id)->where('isActive', 1)->orderBy('created_at')->get();
+        $othersPosts = Post::where('user_id', $user->id)->where('isActive', 0)->orderBy('created_at')->get();
 
 
         // zobraz tuto stranku a predaj tam parametre posts

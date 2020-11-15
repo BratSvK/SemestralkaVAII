@@ -17,8 +17,8 @@
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
             crossorigin="anonymous"></script>
 
+    <script src="js/app.js" defer></script>
 
-    <!-- <script src="scripts/app.js" defer></script> -->
 </head>
 
 <body>
@@ -139,8 +139,9 @@
                                 <h2>{{$Apost->title}}</h2>
                             @endif
                             <p>{{$Apost->body}}</p>
-                            <button class="alt">More Info</button>
+                            <button class="alt" id="info" data-toggle="tooltip" data-placement="top" title="{{$Apost->info}}">More Info</button>
                             <button>Finish</button>
+
                         </li>
                     @endforeach
 
@@ -172,12 +173,13 @@
                                 <h2>{{$Opost->title}}</h2>
                             @endif
                             <p>{{$Opost->body}}</p>
-                            <button class="alt">More Info</button>
+                            <button class="alt" id="info" data-toggle="tooltip" data-placement="top" title="{{$Opost->info}}">More Info</button>
                             <button>Finish</button>
                         </li>
                     @endforeach
                 </ul>
             </section>
+
         </div>
     </div>
 </div>
@@ -195,5 +197,6 @@
     <!-- <button id="stop-analytics-btn">Stop Analytics</button> -->
 </footer>
 </body>
+
 
 </html>
