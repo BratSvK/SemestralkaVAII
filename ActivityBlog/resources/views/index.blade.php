@@ -111,6 +111,7 @@
 
         <div class="col-md-10">
 
+            <!--  panel Aktivne-->
             <section id="active-projects">
                 <header>
                     <h2>Active Projects</h2>
@@ -133,6 +134,7 @@
                     </li>
                 </ul>
             </section>
+            <!-- panel Finished-->
             <section id="finished-projects">
                 <header>
                     <h2>Finished Projects</h2>

@@ -124,8 +124,8 @@
 
                 <div class="form-group">
 
-                    {!! Form::label('content', 'Content:') !!}
-                    {!! Form::text('content', null , ['class'=>'form-control']) !!}
+                    {!! Form::label('body', 'body:') !!}
+                    {!! Form::text('body', null , ['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
 

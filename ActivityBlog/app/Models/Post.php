@@ -13,7 +13,7 @@ class Post extends Model
     //what is save for update in post::create
     protected $fillable = [
         'title',
-        'content',
+        'body',
         'info',
         'isActive',
         'isMain'
