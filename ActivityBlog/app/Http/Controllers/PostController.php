@@ -18,10 +18,19 @@ class PostController extends Controller
     {
 
         $user = User::findOrFail(1);
-        $posts = $user->posts;
+        if(!$user){
+            $post = new Post();
+
+            return "Nenasiel sa User";
+        }
+
+        $activePosts = Post::where('user_id',$user->id)->where('isActive',1)->orderBy('created_at')->get();
+        $othersPosts = Post::where('user_id',$user->id)->where('isActive',0)->orderBy('created_at')->get();
+
+
 
         // zobraz tuto stranku a predaj tam parametre posts
-        return view('posts', compact('posts'));
+        return view('posts', compact('activePosts', 'othersPosts'));
 
 
     }
@@ -57,7 +66,7 @@ class PostController extends Controller
         // need to create instane to save to user
 
         $post = new Post(['title' => $request->title, 'body' => $request->body,
-                            'info' => $request->info,'user_id' => $user->id, 'is_main' => $request->is_main]);
+            'info' => $request->info, 'user_id' => $user->id, 'is_main' => $request->is_main]);
 
         $user->posts()->save($post);
 

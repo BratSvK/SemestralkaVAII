@@ -4,12 +4,9 @@
     <list default="true" id="4824f4b8-7883-4d2b-8dfa-f312957ea512" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Utility/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Utility/blog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/creation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/creation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/eshop.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/eshop.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/events.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/events.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +165,7 @@
       <workItem from="1604909184294" duration="5553000" />
       <workItem from="1604916450422" duration="74000" />
       <workItem from="1605352112119" duration="3001000" />
-      <workItem from="1605424252683" duration="6260000" />
+      <workItem from="1605424252683" duration="8924000" />
     </task>
     <servers />
   </component>
@@ -184,14 +181,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604497516003" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1604912395084">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1605431421746">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604912395084" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1605352984877">
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605431421746" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1605430890396">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605352984877" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605430890396" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605427566373">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -10,6 +10,9 @@ class Post extends Model
     use HasFactory;
 
 
+
+
+
     //what is save for update in post::create
     protected $fillable = [
         'title',
@@ -24,6 +27,11 @@ class Post extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
+
+
+
+
 
 
 

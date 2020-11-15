@@ -96,9 +96,10 @@
         <!-- Statistika-->
         <ul class="info rounded list-group col-md-2">
             <li class="list-group-item d-flex justify-content-between align-items-center ">Active: <span
-                    class="badge badge-primary badge-pill">2</span></li>
+                    class="badge badge-primary badge-pill">{{count($activePosts)}}</span></li>
             <li class="list-group-item d-flex justify-content-between align-items-center">Finished: <span
-                    class="badge badge-primary badge-pill">1</span></li>
+                    class="badge badge-primary badge-pill">{{count($othersPosts)}}</span></li>
+
             <li class="list-group-item d-flex justify-content-between align-items-center">Main Goal: <span
                     class="badge badge-primary badge-pill"><svg width="1em" height="1em" viewBox="0 0 16 16"
                                                                 class="bi bi-check"
@@ -111,8 +112,6 @@
 
         <div class="col-md-10">
 
-        @foreach($posts as $post)
-            @if($post->isActive)
             <!--  panel Aktivne-->
             <section id="active-projects">
                 <header>
@@ -121,61 +120,64 @@
                 <ul>
                     <!--nacitanie Postov-->
 
+                    @foreach($activePosts as $Apost)
 
-                        <li id="{{$post->id}}" data-extra="{{$post->info}}" class="card" draggable="true">
-                            @if($post->is_main)
+                        <li id="{{$Apost->id}}" data-extra="{{$Apost->info}}" class="card" draggable="true">
+                            @if($Apost->is_main)
 
                                 <h2> <span> <svg width="1em" height="1em" viewBox="0 0 16 16"
                                                  class="bi bi-exclamation-square text-danger"
                                                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                          d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    <path
-                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-                  </svg></span> {{$post->title}}
+                                        <path fill-rule="evenodd"
+                                              d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path
+                                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                                      </svg></span> {{$Apost->title}}
                                 </h2>
 
                             @else
-                                <h2>{{$post->title}}</h2>
+                                <h2>{{$Apost->title}}</h2>
                             @endif
-                            <p>{{$post->body}}</p>
+                            <p>{{$Apost->body}}</p>
                             <button class="alt">More Info</button>
                             <button>Finish</button>
                         </li>
-
+                    @endforeach
 
 
                 </ul>
             </section>
-            @else
             <!-- panel Finished-->
             <section id="finished-projects">
                 <header>
                     <h2>Finished Projects</h2>
                 </header>
                 <ul>
-                    <li id="p3" data-extra-info="Super important party! Needed to be cool!" class="card"
-                        draggable="true">
-                        <h2> <span> <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                         class="bi bi-exclamation-square text-danger"
-                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                          d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    <path
-                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-                  </svg></span> Book Table
-                        </h2>
-                        <p>
-                            My birthday party takes place in November, don't forget to book a
-                            table in restaurant.
-                        </p>
-                        <button class="alt">More Info</button>
-                        <button>Activate</button>
-                    </li>
+                    @foreach($othersPosts as $Opost)
+
+                        <li id="{{$Opost->id}}" data-extra="{{$Opost->info}}" class="card" draggable="true">
+                            @if($Opost->is_main)
+
+                                <h2> <span> <svg width="1em" height="1em" viewBox="0 0 16 16"
+                                                 class="bi bi-exclamation-square text-danger"
+                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                              d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path
+                                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                                      </svg></span> {{$Opost->title}}
+                                </h2>
+
+                            @else
+                                <h2>{{$Opost->title}}</h2>
+                            @endif
+                            <p>{{$Opost->body}}</p>
+                            <button class="alt">More Info</button>
+                            <button>Finish</button>
+                        </li>
+                    @endforeach
                 </ul>
             </section>
-                @endif
-                @endforeach
         </div>
     </div>
 </div>
