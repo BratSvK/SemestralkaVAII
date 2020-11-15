@@ -150,14 +150,20 @@
 
                             @else
                                 <h2>{{$Apost->title}}</h2>
-                            @endif
-                            <span class="remove">
-                                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill"
-                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd"
-        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-</svg>
-                            </span>
+                        @endif
+                            <!-- Ikonka remove-->
+                                {!! Form::open(['method'=>'DELETE', 'action'=>['App\Http\Controllers\PostController@destroy', $Apost->id]]) !!}
+                                <button type="submit" class="remove">
+                                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill"
+                                         fill="black" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                                    </svg>
+                                </button>
+
+
+                            {!! Form::close() !!}
+                            <!-- Ikonka remove-->
                             <p>{{$Apost->body}}</p>
                             <button class="alt" id="info" data-toggle="tooltip" data-placement="top"
                                     title="{{$Apost->info}}">More Info
@@ -197,13 +203,20 @@
                             @else
                                 <h2>{{$Opost->title}}</h2>
                             @endif
-                            <span class="remove">
+                        <!-- Ikonka remove-->
+                            {!! Form::open(['method'=>'DELETE', 'action'=>['App\Http\Controllers\PostController@destroy', $Opost->id]]) !!}
+                            <button type="submit" class="remove">
                                 <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill"
-                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd"
-        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-</svg>
-                            </span>
+                                     fill="black" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                                </svg>
+                            </button>
+
+
+                        {!! Form::close() !!}
+                        <!-- Ikonka remove-->
+
                             <p>{{$Opost->body}}</p>
                             <button class="alt" id="info" data-toggle="tooltip" data-placement="top"
                                     title="{{$Opost->info}}">More Info

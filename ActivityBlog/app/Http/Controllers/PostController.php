@@ -22,11 +22,8 @@ class PostController extends Controller
         $post = $user->posts;
         $activePosts = $post->where('isActive', 1)->sortBy('created_at');
         $othersPosts = $post->where('isActive', 0)->sortBy('created_at');
-        $mainPost = $post->where('is_main',1);
+        $mainPost = $post->where('is_main', 1);
         $isMain = $mainPost->count() > 0 ? true : false;
-
-
-
 
 
         // zobraz tuto stranku a predaj tam parametre posts
@@ -69,7 +66,6 @@ class PostController extends Controller
             'info' => $request->info, 'user_id' => $user->id, 'is_main' => $request->is_main]);
 
 
-
         $user->posts()->save($post);
 
 
@@ -87,7 +83,7 @@ class PostController extends Controller
     public function show($id)
     {
         //
-        return "ahoj";
+        return "ahoj". $id;
     }
 
     /**
@@ -99,8 +95,7 @@ class PostController extends Controller
     public function edit($id)
     {
         //
-        $post = Post::findOrFail($id)->update(['isActive'=> 0]);
-
+        $post = Post::findOrFail($id)->update(['isActive' => 0]);
 
 
         return back()->with('success', 'Activity successfully finished.');
@@ -131,6 +126,10 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+
+        $post = Post::where('id', $id)->delete();
+
+        return back()->with('success', 'Activity successfully deleted.');
     }
 
 

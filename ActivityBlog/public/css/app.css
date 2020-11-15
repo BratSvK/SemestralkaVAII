@@ -330,10 +330,14 @@ a > svg {
     margin: 10px;
     visibility: hidden;
 
-
+}
+button.remove {
+    background-color: white;
+    border: none;
+    margin-right: 0;
 }
 
-.card:hover span.remove {
+.card:hover button.remove {
     visibility: visible;
 }
 
