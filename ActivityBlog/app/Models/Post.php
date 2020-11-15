@@ -19,7 +19,7 @@ class Post extends Model
         'body',
         'info',
         'isActive',
-        'isMain'
+        'is_main'
     ];
 
 

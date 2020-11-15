@@ -101,14 +101,25 @@
             <li class="list-group-item d-flex justify-content-between align-items-center">Finished: <span
                     class="badge badge-primary badge-pill">{{count($othersPosts)}}</span></li>
 
-
-            <li class="list-group-item d-flex justify-content-between align-items-center">Main Goal: <span
-                    class="badge badge-primary badge-pill"><svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                class="bi bi-check"
-                                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            @if($isMain)
+                <li class="list-group-item d-flex justify-content-between align-items-center">Main Goal: <span
+                        class="badge badge-primary badge-pill"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                                                    class="bi bi-check"
+                                                                    fill="currentColor"
+                                                                    xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
                     d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
             </svg></span></li>
+            @else
+                <li class="list-group-item d-flex justify-content-between align-items-center">Main Goal: <span
+                        class="badge badge-primary badge-pill"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                                                    class="bi bi-x" fill="currentColor"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></span></li>
+
+            @endif
         </ul>
         <!-- Konci panel Statistika-->
 
@@ -141,11 +152,13 @@
                                 <h2>{{$Apost->title}}</h2>
                             @endif
                             <p>{{$Apost->body}}</p>
-                            <button class="alt" id="info" data-toggle="tooltip" data-placement="top" title="{{$Apost->info}}">More Info</button>
+                            <button class="alt" id="info" data-toggle="tooltip" data-placement="top"
+                                    title="{{$Apost->info}}">More Info
+                            </button>
 
-                                <a href="{{route('posts.edit', $Apost->id)}}">
-                                    <button>Finish</button>
-                                </a>
+                            <a href="{{route('posts.edit', $Apost->id)}}">
+                                <button>Finish</button>
+                            </a>
 
                         </li>
                     @endforeach
@@ -178,10 +191,12 @@
                                 <h2>{{$Opost->title}}</h2>
                             @endif
                             <p>{{$Opost->body}}</p>
-                            <button class="alt" id="info" data-toggle="tooltip" data-placement="top" title="{{$Opost->info}}">More Info</button>
-                                <a href="{{route('posts.edit', $Opost->id)}}">
-                                    <button>Finish</button>
-                                </a>
+                            <button class="alt" id="info" data-toggle="tooltip" data-placement="top"
+                                    title="{{$Opost->info}}">More Info
+                            </button>
+                            <a href="{{route('posts.edit', $Opost->id)}}">
+                                <button>Finish</button>
+                            </a>
                         </li>
                     @endforeach
                 </ul>

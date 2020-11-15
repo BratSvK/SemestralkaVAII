@@ -22,11 +22,15 @@ class PostController extends Controller
         $post = $user->posts;
         $activePosts = $post->where('isActive', 1)->sortBy('created_at');
         $othersPosts = $post->where('isActive', 0)->sortBy('created_at');
+        $mainPost = $post->where('is_main',1);
+        $isMain = $mainPost->count() > 0 ? true : false;
+
+
 
 
 
         // zobraz tuto stranku a predaj tam parametre posts
-        return view('posts', compact('activePosts', 'othersPosts'));
+        return view('posts', compact('activePosts', 'othersPosts', 'isMain'));
 
 
     }
@@ -64,6 +68,8 @@ class PostController extends Controller
         $post = new Post(['title' => $request->title, 'body' => $request->body,
             'info' => $request->info, 'user_id' => $user->id, 'is_main' => $request->is_main]);
 
+       
+
         $user->posts()->save($post);
 
 
@@ -94,7 +100,7 @@ class PostController extends Controller
     {
         //
         $post = Post::findOrFail($id)->update(['isActive'=> 0]);
-        
+
 
 
         return back()->with('success', 'Activity successfully finished.');
