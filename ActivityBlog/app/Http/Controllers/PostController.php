@@ -17,8 +17,11 @@ class PostController extends Controller
     public function index()
     {
 
-        //$posts = User::posts()->get();
-        //return $posts;
+        $user = User::findOrFail(1);
+        $posts = $user->posts;
+
+        // zobraz tuto stranku a predaj tam parametre posts
+        return view('posts', compact('posts'));
 
 
     }
@@ -73,6 +76,7 @@ class PostController extends Controller
     public function show($id)
     {
         //
+        return "ahoj";
     }
 
     /**

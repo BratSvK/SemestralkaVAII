@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
@@ -14,9 +16,7 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [PostController::class, 'index']);
 
 Route::resource('/posts', PostController::class);  //for creation routes
 

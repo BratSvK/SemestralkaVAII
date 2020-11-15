@@ -37,7 +37,7 @@
         </button>
         <div class="logo">
 
-            <a class="navbar-brand" href="/"></a>
+            <a class="navbar-brand" href="posts"></a>
 
         </div>
 
@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">
+                    <a class="nav-link" href="posts">
                         <svg width="1em" height="1em" viewBox="0 0 16 16"
                              class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -111,29 +111,43 @@
 
         <div class="col-md-10">
 
+        @foreach($posts as $post)
+            @if($post->isActive)
             <!--  panel Aktivne-->
             <section id="active-projects">
                 <header>
                     <h2>Active Projects</h2>
                 </header>
                 <ul>
-                    <li id="p1" data-extra-info="Got lifetime access, but would be nice to finish it soon!" class="card"
-                        draggable="true">
-                        <h2>Finish a exercise2 from VAII</h2>
-                        <p>Finish the exercise2 within the next two weeks.</p>
-                        <button class="alt">More Info</button>
-                        <button>Finish</button>
-                    </li>
-                    <li id="p2" data-extra-info="Not really a business topic but still important." class="card"
-                        draggable="true">
-                        <!--  casom to chcem aj aby sa to dalo drag Event -->
-                        <h2>Buy Groceries</h2>
-                        <p>Don't forget to pick up groceries today.</p>
-                        <button class="alt">More Info</button>
-                        <button>Finish</button>
-                    </li>
+                    <!--nacitanie Postov-->
+
+
+                        <li id="{{$post->id}}" data-extra="{{$post->info}}" class="card" draggable="true">
+                            @if($post->is_main)
+
+                                <h2> <span> <svg width="1em" height="1em" viewBox="0 0 16 16"
+                                                 class="bi bi-exclamation-square text-danger"
+                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path
+                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                  </svg></span> {{$post->title}}
+                                </h2>
+
+                            @else
+                                <h2>{{$post->title}}</h2>
+                            @endif
+                            <p>{{$post->body}}</p>
+                            <button class="alt">More Info</button>
+                            <button>Finish</button>
+                        </li>
+
+
+
                 </ul>
             </section>
+            @else
             <!-- panel Finished-->
             <section id="finished-projects">
                 <header>
@@ -160,6 +174,8 @@
                     </li>
                 </ul>
             </section>
+                @endif
+                @endforeach
         </div>
     </div>
 </div>
