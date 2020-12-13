@@ -14,6 +14,15 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //creating constructor for initialize if user is loggin
+    public function __construct() {
+
+
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
 

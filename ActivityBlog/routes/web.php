@@ -19,6 +19,8 @@ use App\Http\Controllers\PostController;
 Route::get('/', [PostController::class, 'index']);
 
 
+// creating auth routes login and register
+Auth::routes();
 
 Route::resource('/posts', PostController::class);  //for creation routes
 
