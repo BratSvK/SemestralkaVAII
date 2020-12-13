@@ -4,7 +4,8 @@
 
 
         <main class="form-signin">
-                    <form method="POST" action="{{ route('login') }}">
+
+           <form method="POST" action="{{ route('login') }}">
                         <!--  logo -->
                         <img class="logo" width="72" height="57" >
                         @csrf
@@ -54,7 +55,7 @@
                         @endif
 
 
-                    </form>
+                </form>
         </main>
 
 

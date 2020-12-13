@@ -22,6 +22,16 @@
 
 </head>
 
+<template id="modal-template">
+    <div class="backdrop"></div>
+    <div class="modalW"></div>
+</template>
+<template id="loading-modal-content">
+    <div class="modal__content centered">
+        <div class="lds-dual-ring"></div>
+    </div>
+</template>
+
 <body class="text-center">
 @yield('content')
 

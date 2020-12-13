@@ -19,6 +19,37 @@ body {
     font-weight: 400!important;
 }
 
+.modal__content {
+    padding: 1rem;
+    min-height: 10rem;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+
+
+
+.lds-dual-ring:after {
+    content: ' ';
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #36007c;
+    border-color: #36007c transparent #36007c transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
 .logo {
     background: url("../assets/images/logo.png") no-repeat left;
     width: 6rem;
