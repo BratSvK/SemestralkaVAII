@@ -2,8 +2,11 @@
 
 use App\Models\User;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\AuthLogOut;
 
 /*
 |--------------------------------------------------------------------------

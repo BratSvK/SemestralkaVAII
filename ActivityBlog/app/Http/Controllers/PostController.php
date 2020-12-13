@@ -70,6 +70,9 @@ class PostController extends Controller
         ]);
         // need to create instane to save to user
 
+        if($request->is_main == null) {
+            $request->is_main = 0;
+        }
         $post = new Post(['title' => $request->title, 'body' => $request->body,
             'info' => $request->info, 'user_id' => $user->id, 'is_main' => $request->is_main]);
 
