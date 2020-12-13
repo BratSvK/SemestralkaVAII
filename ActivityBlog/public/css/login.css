@@ -1,0 +1,69 @@
+/* form sign in css style */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex !important;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100vw;
+
+    background-color: #e6faff !important;
+}
+
+.nadpis-normal{
+    font-weight: 400!important;
+}
+
+.logo {
+    background: url("../assets/images/logo.png") no-repeat left;
+    width: 6rem;
+    height: 100%;
+    border-radius: 10%;
+
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.visually-hidden, .visually-hidden-focusable:not(:focus) {
+    position: absolute!important;
+    width: 1px!important;
+    height: 1px!important;
+    padding: 0!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    clip: rect(0,0,0,0)!important;
+    white-space: nowrap!important;
+    border: 0!important;
+}
