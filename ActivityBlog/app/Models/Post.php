@@ -23,6 +23,7 @@ class Post extends Model
     ];
 
 
+    // metoda vztahu 1:* najdde vsetko co pratri userovi
     public function user()
     {
         return $this->belongsTo('App\Models\User');

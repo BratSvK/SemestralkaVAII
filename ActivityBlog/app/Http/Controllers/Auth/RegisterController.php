@@ -29,6 +29,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
+
+    // kde nas to ma presunnut
     protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
@@ -49,6 +51,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // validacia pre vstupne udaje
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -67,7 +70,15 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make($data['password']),            // posle na databazu zahashovenae heslo
         ]);
+    }
+
+    // tu sa dostaneme ked bude uspesna registracia
+    public function redirectTo() {
+
+        // ist na home page
+        return route('/');
+
     }
 }

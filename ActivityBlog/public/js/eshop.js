@@ -7,14 +7,14 @@ class Product {
       this.price = price;
     }
   }
-  
+
   class ElementAttributes {
     constructor(attrName, attrValue) {
       this.name = attrName;
       this.value = attrValue;
     }
   }
-  
+
   class Component {
     // kde to chceme vykreslit
     constructor(renderHookId, shouldRender = true) {
@@ -22,9 +22,9 @@ class Product {
       if(shouldRender)
       this.render();
     }
-  
+
     render() {}
-  
+
     // vytvorenie sablony elementu
     createRootElement(tag, cssClasses, atributes) {
       const rootElement = document.createElement(tag);
@@ -40,21 +40,21 @@ class Product {
       return rootElement;
     }
   }
-  
+
   class ShoppingCart extends Component {
     items = [];
-  
+
     // value is array of items
     set cartItems(value) {
       this.items = value;
       this.totalOutput.innerHTML = ` <h2>Total: \€${this.totalAmount.toFixed(2)}</h2>`;
     }
-  
+
     get totalAmount() {
       const sum = this.items.reduce((prevValue, curItem) => prevValue + curItem.price, 0);
       return sum;
     }
-  
+
     constructor(renderHookId) {
       super(renderHookId, false);
       this.orderProducts = () => {
@@ -63,42 +63,42 @@ class Product {
       }
       this.render();
     }
-  
+
     addProduct(product) {
       const updatedItems = [...this.items];
       updatedItems.push(product);
       this.cartItems = updatedItems;
     }
-  
-    
-  
+
+
+
     render() {
       const cartEl = this.createRootElement("section", "cart");
       cartEl.innerHTML = `
       <h2>Total: \€${0}</h2>
       <button>Order Now!</button>
       `;
-  
+
       const orderButton = document.querySelector("button");
       orderButton.addEventListener("click", this.orderProducts);
       this.totalOutput = cartEl.querySelector("h2");
     }
   }
-  
+
   class ProductItem extends Component {
     constructor(product, renderHookId) {
       super(renderHookId,false);
       this.product = product;
       this.render();
     }
-  
+
     // add to cart
     addToCart() {
       // vylepsenie
       App.addProductToCart(this.product);
     }
-  
-  
+
+
     render() {
       const prodEl = this.createRootElement("li", "product-item");
       // toto je vlastny kod to je logic co musi ostat
@@ -113,22 +113,22 @@ class Product {
                       </div>
                     </div>
                     `;
-  
+
       const addCartButton = prodEl.querySelector("button");
       addCartButton.addEventListener("click", this.addToCart.bind(this));
     }
   }
-  
+
   class ProductList extends Component {
     #products = [];
-  
+
     constructor(renderHookId) {
       super(renderHookId, false);
       this.render();
       this.fetchProcucts();
-      
+
     }
-  
+
     fetchProcucts() {
       this.#products = [
         new Product(
@@ -146,14 +146,14 @@ class Product {
       ];
       this.renderProducts();
     }
-  
+
     renderProducts() {
       for (const product of this.#products) {
         new ProductItem(product, "prod-list");
       }
-  
+
     }
-  
+
     render() {
       this.createRootElement("ul", "product-list", [new ElementAttributes("id", "prod-list")]);
       // render a single product
@@ -162,7 +162,7 @@ class Product {
       }
     }
   }
-  
+
   class Shop extends Component {
     constructor() {
       super();
@@ -174,21 +174,27 @@ class Product {
       new ProductList("app");
     }
   }
-  
+
   class App {
     // expect to have static prop
     static cart;
-  
+
     static init() {
       const shop = new Shop();
       this.cart = shop.cart;
     }
-  
+
     //
     static addProductToCart(product) {
       this.cart.addProduct(product);
     }
   }
-  
+const navbarIconBtn = document.querySelector("button");
+const logo = document.getElementById('logo');
+
+navbarIconBtn.addEventListener("click", () => {
+
+    // zavola sa ked sa klikne a naopak toogle je na to
+    logo.classList.toggle("unvisible");
+});
   App.init();
-  

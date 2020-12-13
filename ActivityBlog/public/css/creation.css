@@ -1,12 +1,19 @@
 .alert-success {
+
     float: right;
     border-radius: 20px !important;
 
+}
+body {
+    overflow: hidden;
 }
 
 @media (max-width: 767px) {
     .alert {
         float: none;
+    }
+    .unvisible {
+        display: none;
     }
 }
 

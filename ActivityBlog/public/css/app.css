@@ -10,6 +10,7 @@ body {
     margin: 0;
     width: 100vw;
 
+
     background-color: #e6faff !important;
 }
 
@@ -98,6 +99,7 @@ ul.navbar-nav {
     position: relative;
 }
 
+
 .info li {
     border-radius: 50rem !important;
 }
@@ -110,6 +112,15 @@ ul.navbar-nav {
     font-size: 100% !important;
 }
 
+.exit a {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 1.5rem;
+    color: rgba(0,0,0,.5) !important;
+}
+
 .card {
     border-radius: 10px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -117,6 +128,7 @@ ul.navbar-nav {
     background: white;
     display: list-item !important;
 }
+
 
 #active-projects {
     border: 1px solid #870099;
@@ -341,6 +353,8 @@ button.remove {
     visibility: visible;
 }
 
+
+
 @keyframes lds-dual-ring {
     0% {
         transform: rotate(0deg);
@@ -351,8 +365,21 @@ button.remove {
 }
 
 @media (max-width: 767px) {
+
+    body {
+        overflow: visible;
+    }
+
     .logo {
-        margin: 0;
+        margin: 0 ;
+    }
+
+    .exit {
+        margin: 0 ;
+    }
+
+    .unvisible {
+        display: none;
     }
 
     ul.navbar-nav {
