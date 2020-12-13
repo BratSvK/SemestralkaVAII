@@ -14,6 +14,14 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // musime spravit constructor pre authentifikaciu a ochranu ci sme prihlaseny
+    public function __construct(){
+
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
 

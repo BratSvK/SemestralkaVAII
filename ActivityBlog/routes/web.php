@@ -20,6 +20,9 @@ Route::get('/', [PostController::class, 'index']);
 
 
 
+//vygenerovat auth routes aby sme vedli sa na ne odvolat
+Auth::routes();
+
 Route::resource('/posts', PostController::class);  //for creation routes
 
 
