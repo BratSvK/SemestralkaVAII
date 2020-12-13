@@ -10,6 +10,7 @@ body {
     margin: 0;
     width: 100vw;
 
+
     background-color: #e6faff !important;
 }
 
@@ -364,8 +365,21 @@ button.remove {
 }
 
 @media (max-width: 767px) {
+
+    body {
+        overflow: visible;
+    }
+
     .logo {
-        margin: 0;
+        margin: 0 ;
+    }
+
+    .exit {
+        margin: 0 ;
+    }
+
+    .unvisible {
+        display: none;
     }
 
     ul.navbar-nav {

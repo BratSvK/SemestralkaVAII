@@ -1,10 +1,25 @@
 
 const infoBtn = document.getElementById('info');
+const navbarIconBtn = document.querySelector("button");
+const logo = document.getElementById('logo');
+
 
 //using JQUERY
 $(infoBtn).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
+
+
+navbarIconBtn.addEventListener("click", () => {
+
+    // zavola sa ked sa klikne a naopak toogle je na to
+    logo.classList.toggle("unvisible");
+});
+
+
+
+
+
 
 
 

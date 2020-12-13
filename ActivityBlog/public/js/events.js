@@ -1,8 +1,18 @@
 import { Modal } from "./UI/Modal.js";
 import { Map } from "./UI/Map.js";
 
+const navbarIconBtn = document.querySelector("button");
+const logo = document.getElementById('logo');
+
+
 $(function() {
     $("#trackme").tooltip();
+});
+
+navbarIconBtn.addEventListener("click", () => {
+
+    // zavola sa ked sa klikne a naopak toogle je na to
+    logo.classList.toggle("unvisible");
 });
 
 class PlaceFinder {
@@ -43,7 +53,7 @@ class PlaceFinder {
             "loading-modal-content",
             "Loading location - please wait"
         );
-       
+
         modal.show();
 
         navigator.geolocation.getCurrentPosition(
@@ -58,8 +68,8 @@ class PlaceFinder {
                 //aplying a seleccted coordinates
 
                 this.selectPlace(coordinates); // this target to  event not for class
-                
-               
+
+
             },
             error => {
                 // hide a loading spinner

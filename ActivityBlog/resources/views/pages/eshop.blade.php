@@ -34,7 +34,7 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="logo">
+            <div class="logo" id="logo">
 
                 <a class="navbar-brand" href="posts"></a>
             </div>
@@ -74,6 +74,15 @@
                             </svg> Shop <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
+                <div class="exit">
+                    <a class="nav-link " href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2v13h1V2.5a.5.5 0 0 0-.5-.5H11zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
+                        </svg>
+
+                        Log out</a>
+
+                </div>
             </div>
 
         </nav>
