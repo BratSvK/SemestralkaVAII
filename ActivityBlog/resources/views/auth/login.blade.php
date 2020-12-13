@@ -40,12 +40,18 @@
 
 
                                 <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-                        <!--  zavolaj metodu ked som zabudol heslo  -->
+                        <!--  zavolaj metodu ked som zabudol heslo ak ju mame vytvorenu, to znamena ze je dostupna  -->
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                    <!--  zavolaj metodu ked som zabudol heslo ak ju mame vytvorenu, to znamena ze je dostupna , registracia noveho uzivatela -->
+                        @if (Route::has('register'))
+                            <a class="btn btn-link" href="{{ route('register') }}">
+                                {{ __('Are you new ?') }}
+                            </a>
+                        @endif
 
 
                     </form>

@@ -15,7 +15,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    // musime spravit constructor pre authentifikaciu a ochranu ci sme prihlaseny
+    // musime spravit constructor pre authentifikaciu a ochranu ci sme prihlaseny, vsetky metody v nom
     public function __construct(){
 
         $this->middleware('auth');
@@ -60,9 +60,9 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //ulozit do databazy
-
+        //najskor najst user v databaze eloquent model
         $user = User::findOrFail(1);
-        //najskor najst user
+
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
@@ -72,7 +72,6 @@ class PostController extends Controller
 
         $post = new Post(['title' => $request->title, 'body' => $request->body,
             'info' => $request->info, 'user_id' => $user->id, 'is_main' => $request->is_main]);
-
 
         $user->posts()->save($post);
 

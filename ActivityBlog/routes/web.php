@@ -25,17 +25,18 @@ Auth::routes();
 
 Route::resource('/posts', PostController::class);  //for creation routes
 
+Route::resource('/creation', PostController::class);  //for creation routes
 
 Route::get('/creation', function () {
     return view('pages/creation');
-});
+})->middleware('auth');
 
 Route::get('/events', function () {
     return view('pages/events');
-});
+})->middleware('auth');
 
 Route::get('/eshop', function () {
     return view('pages/eshop');
-});
+})->middleware('auth');
 
 
