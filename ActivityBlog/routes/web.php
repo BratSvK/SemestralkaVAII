@@ -42,4 +42,4 @@ Route::get('/eshop', function () {
     return view('pages/eshop');
 })->middleware('auth');
 
-
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
