@@ -31,7 +31,7 @@ class RegisterController extends Controller
      */
 
     // kde nas to ma presunnut
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/posts';
 
     /**
      * Create a new controller instance.
@@ -78,7 +78,7 @@ class RegisterController extends Controller
     public function redirectTo() {
 
         // ist na home page
-        return route('/');
+        return route('/posts');
 
     }
 }

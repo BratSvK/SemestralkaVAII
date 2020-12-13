@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Psy\CodeCleaner\UseStatementPass;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -25,7 +26,8 @@ class PostController extends Controller
     public function index()
     {
 
-        $user = User::findOrFail(1);
+        $id = Auth::id();
+        $user = User::findOrFail($id);
         // only user posts
         $post = $user->posts;
         $activePosts = $post->where('isActive', 1)->sortBy('created_at');
@@ -61,7 +63,8 @@ class PostController extends Controller
     {
         //ulozit do databazy
         //najskor najst user v databaze eloquent model
-        $user = User::findOrFail(1);
+        $id = Auth::id();
+        $user = User::findOrFail($id);
 
         $this->validate($request, [
             'title' => 'required',
