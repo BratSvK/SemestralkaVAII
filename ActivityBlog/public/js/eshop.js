@@ -72,6 +72,8 @@ class Product {
 
 
 
+
+    // generovanie hlavicky s celkovou cenou kosika
     render() {
       const cartEl = this.createRootElement("section", "cart");
       cartEl.innerHTML = `
