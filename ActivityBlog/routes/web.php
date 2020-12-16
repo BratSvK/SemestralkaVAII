@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AuthLogOut;
+use \App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,7 @@ Route::get('/eshop', function () {
 })->middleware('auth');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+// cesta pre AJAX volanie
+// Controller-name@method-name
+Route::get('/getProducts',[ProductsController::class, 'getProducts']);

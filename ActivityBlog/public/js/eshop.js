@@ -129,22 +129,24 @@ class Product {
 
     }
 
+    // tu bude nahravanie zo servera cez json
     fetchProcucts() {
-      this.#products = [
-        new Product(
-          "A pillow",
-          "https://media.istockphoto.com/photos/pillow-isolated-on-white-background-picture-id899226398?k=6&m=899226398&s=612x612&w=0&h=JtsWJqDPEQGmJnqWCkgUcHGHhCmjId1OkELo-uVeY-o=",
-          "A soft pillow!",
-          19.99
-        ),
-        new Product(
-          "A Carpet",
-          "https://karabagh.lu/wp-content/uploads/2016/05/carpets-8.jpg",
-          "A carpet which you might like - or not.",
-          89.99
-        ),
-      ];
-      this.renderProducts();
+        // volanie ajax na server
+        fetch('http://127.0.0.1:8000/getProducts')
+            .then(response => response.json())
+            .then(data => {
+                for (var i = 0; i < data['data'].length; i++) {
+                    //console.log("som tu " + data['data'][i]['title']);
+                    this.#products.push(new Product(
+                        data['data'][i]['title'],
+                        data['data'][i]['image'],
+                        data['data'][i]['description'],
+                        data['data'][i]['price']
+                    ))
+                }
+                this.renderProducts();
+        })
+            .catch(error => console.log(error));
     }
 
     renderProducts() {
